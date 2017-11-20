@@ -1,8 +1,8 @@
 from colorama import init
 init()
 from colorama import Fore,Back,Style
-import keyboard
 import os
+import time
 
 
 
@@ -44,6 +44,8 @@ def displayCombatStatistics():
                 print(Style.RESET_ALL)
             else:
                 print(combatant)
+        
+        time.sleep(0.250)
         x = input("Press enter to continue (q enter to quit)")
 
         os.system('cls')
