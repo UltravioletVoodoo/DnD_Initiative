@@ -3,23 +3,56 @@
 
 
 
+combatants = []
+
+
+
+
+def getInitiatives(combatant):
+    initiative = input("What is the initiative of " + combatant + "?")
+    combatants[combatant] = [combatant,initiative]
+
+
+
+
+def getCombatants():
+    combatants = input("Enter names of combatants seperated by commas").split(",")
+
+
+
+
 def start():
-    characters = input("Enter characters and initiatives in the form character1/initiative1,character2/initiative2 ... etc : ").split(",")
-    
-    initiativeList = []
-
-
-    for character in characters:
-        initiativeList.append([character.split("/")[0], character.split("/")[1]])
-
-    print(initiativeList)
-
-    initiativeList.sort(key=lambda x: x[1])
-
-    print(initiativeList)
-
-    print(initiativeList[::-1])
+    getCombatants()
+    for combatant in combatants:
+        getInitiatives(combatant)
 
 
 
-start()
+
+def introduction():
+    print("Hello world, welcome to the dynamic combat tracker")
+    print("""
+                   ___====-_  _-====___
+           _--^^^#####//      \\\\#####^^^--_
+        _-^##########// (    ) \\\\##########^-_
+       -############//  |\^^/|  \\\\############-
+     _/############//   (@::@)   \\\\############\_
+    /#############((     \\\\//     ))#############\\
+   -###############\\\\    (oo)    //###############-
+  -#################\\\\  / VV \  //#################-
+ -###################\\\\/      \//###################-
+_#/|##########/\######(   /\   )######/\##########|\#_
+|/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
+`  |/  V  V  `   V  \#\| |  | |/#/  V   '  V  V  \|  '
+   `   `  `      `   / | |  | | \   '      '  '   '
+                    (  | |  | |  )
+                   __\ | |  | | /__
+                  (vvv(VVV)(VVV)vvv)
+    """)
+
+    start()
+
+
+
+
+introduction()
