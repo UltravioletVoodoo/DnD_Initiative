@@ -9,22 +9,34 @@ combatants = []
 
 
 def getInitiatives(combatant):
+    global combatants
+
     initiative = input("What is the initiative of " + combatant + "?")
-    combatants[combatant] = [combatant,initiative]
+    combatants[combatants.index(combatant)] = [combatant,initiative]
 
 
 
 
 def getCombatants():
+    global combatants
     combatants = input("Enter names of combatants seperated by commas").split(",")
 
 
 
 
+def displayCombatStatistics():
+    for combatant in combatants:
+        print(combatant)
+
+
+
 def start():
     getCombatants()
+
     for combatant in combatants:
         getInitiatives(combatant)
+
+    displayCombatStatistics()
 
 
 
