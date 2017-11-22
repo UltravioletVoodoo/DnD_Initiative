@@ -40,7 +40,7 @@ def displayCombatStatistics():
 
         for combatant in combatants:
             if (combatants.index(combatant) == i):
-                print (Fore.GREEN + str(combatant))
+                print (Fore.RED + str(combatant))
                 print(Style.RESET_ALL)
             else:
                 print(combatant)
