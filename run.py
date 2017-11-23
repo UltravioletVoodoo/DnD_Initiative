@@ -71,7 +71,7 @@ def displayCombatStatistics():
         #Slow it down to avoid multiple button presses per actual press
         #Then get user input
         time.sleep(0.250)
-        x = input("Press enter to continue (q enter to quit, kill to kill a combatant)")
+        x = input("Press enter to continue (q enter to quit, kill to kill a combatant): ")
 
 
         #check commands -- blank command moves to next turn
