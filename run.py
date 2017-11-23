@@ -29,7 +29,7 @@ def getInitiatives(combatant):
 #Enters the names of combatants into the global combatants list. Names are gotten from the user
 def getCombatants():
     global combatants
-    combatants = input("Enter names of combatants seperated by commas").split(",")
+    combatants = input("Enter names of combatants seperated by commas: ").split(",")
 
 
 
