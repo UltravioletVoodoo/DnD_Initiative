@@ -81,6 +81,15 @@ def displayCombatStatistics():
 
         if (x == 'kill'):
             y = input("Who died?")
+
+
+            #patch bug involving array index changing after deletion
+            for combatant in combatants:
+                if (combatant[0] == y):
+                    if (combatants.index(combatant) < i):
+                        i = i - 1
+
+
             deleteCombatant(y)
         
         #if the user presses enter without any arguments, move to the next turn
